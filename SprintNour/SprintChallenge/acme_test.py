@@ -1,6 +1,6 @@
 import unittest
 from acme import Product
-from acme_report import generate_products, ADJECTIVES, NOUNS
+from acme_report import generate_products, adj, name
 
 
 class AcmeProductTests(unittest.TestCase):
@@ -9,6 +9,12 @@ class AcmeProductTests(unittest.TestCase):
         """Test default product price being 10."""
         prod = Product('Test Product')
         self.assertEqual(prod.price, 10)
+
+    def test_default_product_flammability(self):
+        """Test default product flammability being 0.5"""
+        prod = Product('Test Product')
+        self.assertEqual(prod.flammability, 0.5)
+
 
 
 if __name__ == '__main__':

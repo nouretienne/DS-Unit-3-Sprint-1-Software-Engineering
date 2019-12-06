@@ -1,9 +1,10 @@
 from acme import Product
 
+adj = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
+name = ['Anvil', 'Catapult','Disguise', 'Mousetrap', '???']
+
 def generate_products(time=30):
-    adj = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
-    name = ['Anvil', 'Catapult','Disguise', 'Mousetrap', '???']
-    li = []
+       li = []
     for i in range(time):
         li.append(Product(random.choice(adj) + ' ' + random.choice(name)))
         li[i].price = random.randint(50,100)
