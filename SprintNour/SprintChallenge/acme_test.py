@@ -14,6 +14,10 @@ class AcmeProductTests(unittest.TestCase):
         """Test default product flammability being 0.5"""
         prod = Product('Test Product')
         self.assertEqual(prod.flammability, 0.5)
+    
+    def test_product_explode(self):
+        """Test Product Explode function on a glove"""
+        self.assertEqual(BoxingGlove('Punchy the Third').explode(), "...it's a glove.")
 
 
 
