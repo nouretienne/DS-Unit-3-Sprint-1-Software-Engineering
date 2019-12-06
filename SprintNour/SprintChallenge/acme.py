@@ -24,3 +24,13 @@
         if result<50:
             return "...boom!"
         return "...BABOOM!!"
+
+
+class BoxingGlove(Product):
+     def __init__(self, name,price=10, weight=10, flammability=0.5):
+       super().__init__(name,price, weight, flammability)
+       self.weight =10
+          
+    @classmethod
+    def explode(self):
+        return "...it's a glove."
